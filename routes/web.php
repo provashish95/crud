@@ -23,3 +23,6 @@ Route::get(md5('write/post'), 'PostController@WritePost')->name('write.post');
 Route::get(md5('add/category'), 'PostController@AddCategory')->name('add.category');
 Route::post(md5('store/category'), 'PostController@StoreCategory')->name('store.category');
 
+
+Route::get(md5('all/category'), 'PostController@AllCategory')->name('all.category');
+

@@ -44,4 +44,9 @@ class PostController extends Controller
         }
     }
     //Data insert Ending here......//Data insert Ending here......
+
+      public function AllCategory(){
+        $category = DB::table('categories')->get();
+        return view('post.all_category', compact('category'));
+      }
 }

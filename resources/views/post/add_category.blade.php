@@ -5,7 +5,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>
                     <a href="{{route('add.category')}}" class="btn btn-danger">Add Category</a>
-                    <a href="" class="btn btn-info">All Category</a>
+                    <a href="{{route('all.category')}}" class="btn btn-info">All Category</a>
                 </p>
                 <hr>
                 <!-- Error message here for validation --> <!-- Error message here for validation -->
