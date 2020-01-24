@@ -25,4 +25,6 @@ Route::post(md5('store/category'), 'PostController@StoreCategory')->name('store.
 
 
 Route::get(md5('all/category'), 'PostController@AllCategory')->name('all.category');
+Route::get('view/category/{id}', 'PostController@ViewCategory');
+Route::get('delete/category/{id}', 'PostController@DeleteCategory');
 

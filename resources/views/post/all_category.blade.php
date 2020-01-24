@@ -24,8 +24,8 @@
                          <td>{{$row->created_at}}</td>
                          <td>
                              <a href="" class="btn btn-sm btn-info">Edit</a>
-                             <a href="" class="btn btn-sm btn-danger">Delete</a>
-                             <a href="" class="btn btn-sm btn-success">View</a>
+                             <a href="{{URL::to('delete/category/'.$row->id)}}" class="btn btn-sm btn-danger" id="delete">Delete</a>
+                             <a href="{{URL::to('view/category/'.$row->id)}}" class="btn btn-sm btn-success">View</a>
                          </td>
                      </tr>
                          @endforeach

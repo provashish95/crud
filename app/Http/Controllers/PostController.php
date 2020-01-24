@@ -49,4 +49,17 @@ class PostController extends Controller
         $category = DB::table('categories')->get();
         return view('post.all_category', compact('category'));
       }
+      public function ViewCategory($id){
+       $category = DB::table('categories')->where('id', $id)->first();
+//       return view('post.view_category')->with('category', $category);
+          return view('post.view_category', compact('category'));
+      }
+      public function DeleteCategory($id){
+        $category = DB::table('categories')->where('id', $id)->delete();
+          $notification=array(
+              'messege'=>'Successfully Category Deleted',
+              'alert-type'=>'success'
+          );
+          return Redirect()->back()->with($notification);
+      }
 }
