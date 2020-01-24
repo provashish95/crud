@@ -8,9 +8,7 @@ use DB;
 
 class PostController extends Controller
 {
-    public function WritePost(){
-       return view('post.writepost');
-    }
+
     public function AddCategory(){
         return view('post.add_category');
     }
@@ -61,5 +59,35 @@ class PostController extends Controller
               'alert-type'=>'success'
           );
           return Redirect()->back()->with($notification);
+      }
+      public function EditCategory($id){
+          $category = DB::table('categories')->where('id', $id)->first();
+          return view('post.editcategory',compact('category'));
+      }
+      public function UpdateCategory(Request $request,$id){
+          $validatedData = $request->validate([
+              'name' => 'required|max:25|min:4',
+              'slug' => 'required|max:25|min:4',
+          ]);
+          $data=array();
+          $data['name']=$request->name;
+          $data['slug']=$request->slug;
+          $category=DB::table('categories')->where('id',$id)->update($data);
+          if ($category) {
+              $notification=array(
+                  'messege'=>'Successfully Category Updated',
+                  'alert-type'=>'success'
+              );
+              return Redirect()->route('all.category')->with($notification);
+          }else{
+              $notification=array(
+                  'messege'=>'Nothing to updated',
+                  'alert-type'=>'error'
+              );
+              return Redirect()->route('all.category')->with($notification);
+          }
+      }
+      public function StorePost(){
+
       }
 }
