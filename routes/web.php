@@ -29,5 +29,12 @@ Route::post('update/category/{id}', 'PostController@UpdateCategory');
 Route::get(md5('write/post'), 'PostAddController@WritePost')->name('write.post');
 Route::post(md5('store/post'), 'PostAddController@StorePost')->name('store.post');
 Route::get(md5('all/post'), 'PostAddController@AllPost')->name('all.post');
+Route::get('view/post/{id}', 'PostAddController@ViewPost');
+Route::get('edit/post/{id}', 'PostAddController@editPost');
+Route::post('update/post/{id}', 'PostAddController@UpdatePost');
+Route::get('delete/post/{id}', 'PostAddController@DeletePost');
+
+
+
 
 

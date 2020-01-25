@@ -19,7 +19,7 @@
                     </div>
             @endif
             <!-- Error message here for validation --> <!-- Error message here for validation -->
-                <form action="{{url('update/category'.$category->id)}}" method="post">
+                <form action="{{url('update/category/'.$category->id)}}" method="post">
                     @csrf
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
