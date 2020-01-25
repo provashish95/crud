@@ -48,6 +48,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact')}}">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('student')}}">Student</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -106,7 +109,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+                <p class="copyright text-muted">Copyright &copy; Provashish Roy</p>
             </div>
         </div>
     </div>

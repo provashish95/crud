@@ -37,6 +37,10 @@ Route::get('edit/post/{id}', 'PostAddController@editPost');
 Route::post('update/post/{id}', 'PostAddController@UpdatePost');
 Route::get('delete/post/{id}', 'PostAddController@DeletePost');
 
+//student.....
+Route::get(md5('/student'), 'StudentController@Student')->name('student');
+Route::post(md5('store/student'), 'StudentController@StoreStudent')->name('store.student');
+
 
 
 
