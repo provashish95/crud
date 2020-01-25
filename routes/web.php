@@ -39,9 +39,13 @@ Route::get('delete/post/{id}', 'PostAddController@DeletePost');
 
 //student.....
 Route::get(md5('/student'), 'StudentController@Student')->name('student');
+
 Route::post(md5('store/student'), 'StudentController@StoreStudent')->name('store.student');
-
-
+Route::get(md5('all/student'), 'StudentController@AllStudent')->name('all.student');
+Route::get('view/student/{id}', 'StudentController@ViewStudent');
+Route::get('delete/student/{id}', 'StudentController@DeleteStudent');
+Route::get('edit/student/{id}', 'StudentController@EditStudent');
+Route::post('update/student/{id}', 'StudentController@UpdateStudent');
 
 
 
