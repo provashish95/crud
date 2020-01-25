@@ -57,7 +57,7 @@
                     <br>
                     <div id="success"></div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+                        <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
                     </div>
                 </form>
             </div>

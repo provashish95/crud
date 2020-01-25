@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+//Route::get('/', function () {
+//    return view('pages.index');
+//});
+
+Route::get('/', 'AboutController@index');
+
 Route::get(md5('/about'), 'AboutController@about')->name('about');
 Route::get(md5('/contact'), 'AboutController@contact')->name('contact');
 
