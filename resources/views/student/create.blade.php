@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>
-                    <a href="{{route('all.student')}}" class="btn btn-info">All Student</a>
+                    <a href="{{URL::to('student')}}" class="btn btn-info">All Student</a>
                 </p>
                 <hr><br>
                 <h2 style="color: #7abaff">New Student Insert</h2>
@@ -19,7 +19,7 @@
                     </div>
                 @endif
             <!-- Error message here for validation --> <!-- Error message here for validation -->
-                <form action="{{route('store.student')}}" method="post">
+                <form action="{{URL::to('student')}}" method="post">
                     @csrf
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">

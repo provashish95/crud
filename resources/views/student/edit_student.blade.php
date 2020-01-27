@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>
-                    <a href="{{route('all.student')}}" class="btn btn-info">All Student</a>
+                    <a href="{{URL::to('student')}}" class="btn btn-info">All Student</a>
                 </p>
                 <hr><br>
                 <h2 style="color: #7abaff">Student Update here</h2>
@@ -19,8 +19,9 @@
                     </div>
             @endif
             <!-- Error message here for validation --> <!-- Error message here for validation -->
-                <form action="{{url('update/student/'.$student->id)}}" method="post">
+                <form action="{{url('student/'.$student->id)}}" method="post">
                     @csrf
+                    @method('PUT')
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
                             <label>Student Name</label>
