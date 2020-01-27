@@ -20,14 +20,7 @@ Route::get('/', 'AboutController@index');
 Route::get(md5('/about'), 'AboutController@about')->name('about');
 Route::get(md5('/contact'), 'AboutController@contact')->name('contact');
 
-//Category crud are here.......
-Route::get(md5('add/category'), 'PostController@AddCategory')->name('add.category');
-Route::post(md5('store/category'), 'PostController@StoreCategory')->name('store.category');
-Route::get(md5('all/category'), 'PostController@AllCategory')->name('all.category');
-Route::get('view/category/{id}', 'PostController@ViewCategory');
-Route::get('delete/category/{id}', 'PostController@DeleteCategory');
-Route::get('edit/category/{id}', 'PostController@EditCategory');
-Route::post('update/category/{id}', 'PostController@UpdateCategory');
+
 //Post CRUD are here...........
 Route::get(md5('write/post'), 'PostAddController@WritePost')->name('write.post');
 Route::post(md5('store/post'), 'PostAddController@StorePost')->name('store.post');
@@ -48,3 +41,14 @@ Route::get('delete/post/{id}', 'PostAddController@DeletePost');
 //Route::post('update/student/{id}', 'StudentController@UpdateStudent');
 
 Route::resource('student', 'StudentController');
+
+//Category crud are here.......
+//Route::get(md5('add/category'), 'PostController@AddCategory')->name('add.category');
+//Route::post(md5('store/category'), 'PostController@StoreCategory')->name('store.category');
+//Route::get(md5('all/category'), 'PostController@AllCategory')->name('all.category');
+//Route::get('view/category/{id}', 'PostController@ViewCategory');
+//Route::get('delete/category/{id}', 'PostController@DeleteCategory');
+//Route::get('edit/category/{id}', 'PostController@EditCategory');
+//Route::post('update/category/{id}', 'PostController@UpdateCategory');
+
+Route::resource('category', 'CategoryController');

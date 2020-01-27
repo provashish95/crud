@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>
-                    <a href="{{route('add.category')}}" class="btn btn-danger">Add Category</a>
-                    <a href="{{route('all.category')}}" class="btn btn-info">All Category</a>
+                    <a href="{{URL::to('category/create')}}" class="btn btn-danger">Add Category</a>
+                    <a href="{{URL::to('category')}}" class="btn btn-info">All Category</a>
                 </p>
                 <hr>
                 <!-- Error message here for validation --> <!-- Error message here for validation -->
@@ -19,8 +19,9 @@
                     </div>
             @endif
             <!-- Error message here for validation --> <!-- Error message here for validation -->
-                <form action="{{url('update/category/'.$category->id)}}" method="post">
+                <form action="{{URL::to('category/'.$category->id)}}" method="post">
                     @csrf
+                    @method('PUT')
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
                             <label>Category Name</label>

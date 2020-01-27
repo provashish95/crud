@@ -4,9 +4,9 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>
-                    <a href="{{route('add.category')}}" class="btn btn-danger">Add Category</a>
-                    <a href="{{route('all.category')}}" class="btn btn-info">All Category</a>
-                    <a href="{{route('all.post')}}" class="btn btn-info">All Posts</a>
+                    <a href="{{URL::to('category/create')}}" class="btn btn-danger">Add Category</a>
+                    <a href="{{URL::to('category')}}" class="btn btn-info">All Category</a>
+{{--                    <a href="{{route('all.post')}}" class="btn btn-info">All Posts</a>--}}
                 </p>
                 <hr>
                 @if ($errors->any())
